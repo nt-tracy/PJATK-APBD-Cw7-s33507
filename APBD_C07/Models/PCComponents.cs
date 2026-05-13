@@ -12,5 +12,11 @@ public class PCComponents
     public string ComponentCode { get; set; }
     
     public int Amount { get; set; }
+    
+    [ForeignKey(nameof(PCId))] 
+    public PCs PCs { get; set; } = null;
 
+    [ForeignKey(nameof(ComponentCode))] 
+    public Components Components { get; set; } = null;
+    
 }
