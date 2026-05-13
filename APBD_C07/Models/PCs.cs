@@ -13,7 +13,7 @@ public class PCs
     public string Name { get; set; } = string.Empty;
 
     [Column(TypeName = "float(5)")]
-    public int Weight { get; set; }
+    public double Weight { get; set; }
     
     public int Warranty { get; set; }
     
