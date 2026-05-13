@@ -1,4 +1,11 @@
+using APBD_C07.Infrastructure;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var connectionString = builder.Configuration.GetConnectionString("Default");
+builder.Services.AddDbContext<DatabaseContext>(opt => opt.UseSqlServer(connectionString));
+
 
 // Add services to the container.
 
