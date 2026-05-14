@@ -1,6 +1,6 @@
 ﻿namespace APBD_C07.DTOs;
 
-public class UpdatePCsRequest
-{
+public record UpdatePCsRequest(
+
     
-}
+    );
