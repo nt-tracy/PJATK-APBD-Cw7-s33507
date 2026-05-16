@@ -1,11 +1,15 @@
 using APBD_C07.Infrastructure;
+using APBD_C07.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("Default");
 builder.Services.AddDbContext<DatabaseContext>(opt => opt.UseSqlServer(connectionString));
+builder.Services.AddScoped<IPCsService, PCsService>();
 
+// Dodawanie kontrolerów itp.
+builder.Services.AddControllers();
 // Add services to the container.
 
 builder.Services.AddControllers();
