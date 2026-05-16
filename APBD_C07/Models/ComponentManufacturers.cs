@@ -15,6 +15,7 @@ public class ComponentManufacturers
     [MaxLength(300)]
     public string FullName { get; set; } = string.Empty;
     
+    [Column(TypeName = "date")]
     public DateTime FoundationDate { get; set; }
 
     public IEnumerable<Components> Components { get; set; } = [];

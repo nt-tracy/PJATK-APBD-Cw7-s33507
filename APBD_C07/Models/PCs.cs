@@ -12,11 +12,12 @@ public class PCs
     [MaxLength(50)]
     public string Name { get; set; } = string.Empty;
 
-    [Column(TypeName = "float(5)")]
+    [Column(TypeName = "float")]
     public double Weight { get; set; }
     
     public int Warranty { get; set; }
     
+    [Column(TypeName = "date")]
     public DateTime CreatedAt { get; set; }
     
     public int Stock { get; set; }

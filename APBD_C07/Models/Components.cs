@@ -21,9 +21,9 @@ public class Components
     public int ComponentTypesId { get; set; }
 
     [ForeignKey(nameof(ComponentManufacturersId))]
-    public ComponentManufacturers ComponentManufacturers { get; set; } = null;
+    public ComponentManufacturers ComponentManufacturers { get; set; } = null!;
 
     [ForeignKey(nameof(ComponentTypesId))] 
-    public ComponentTypes ComponentTypes { get; set; } = null;
+    public ComponentTypes ComponentTypes { get; set; } = null!;
 
 }
